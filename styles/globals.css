@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+
 html,
 body {
+  width: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Source Sans Pro", arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  color: black;
 }
 
 a {
@@ -13,4 +18,31 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-size: 26px;
+}
+
+.intro {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  min-width: 213px;
+  padding: 11px 40px 13px;
+  border-radius: 25px;
+  color: white;
+  background-color: #92004d;
+  font-size: 1.125rem;
+}
+
+.footnote {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #222222;
 }
