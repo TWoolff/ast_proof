@@ -1,6 +1,6 @@
 export const chapters = [
   {
-    "id": 0,
+    "chapterId": 0,
     "title": "",
     "intro": "<p>Hej Thomas</p><p>Velkommen til dit årlige servicetjek.</p><p>I servicetjekket opdaterer du os om dit liv her og nu og får anbefalinger, som passer til dig. Nogle ting ved vi på forhånd, andre skal du fortælle os. Du behøver kun at udfylde det, du selv ønsker.</p><p>Servicetjekket tager kun få minutter.</p>",
     "btn_text": "Start her",
@@ -10,7 +10,7 @@ export const chapters = [
     "result_btn_link": "/resultat/"
   },
   {
-    "id": 1,
+    "chapterId": 1,
     "title": "Hvordan hjælper vi dig bedst?",
     "intro": "I PKA kan du klare din pension online, og du kan også altid tale med en rådgiver. Vælg, hvad du foretrækker.",
     "image": "/kapitel1.png",
@@ -63,11 +63,13 @@ export const chapters = [
     ]
   },
   {
-    "id": 2,
+    "chapterId": 2,
     "title": "Sparer du nok op??",
     "intro": "Din pension er med til at sikre, at du har en god økonomi - fra du stopper med at arbejde og resten af livet. Se, hvad du kan forvente at få udbetalt sammenlignet med din løn i dag. Det giver dig et godt overblik over, om du sparer nok op.",
     "image": "/kapitel2.png",
     "btn_text": "Næste",
-    "btn_link": "2/page/1"
+    "btn_link": "2/page/1",
+
+    "pages": []
   }
 ]

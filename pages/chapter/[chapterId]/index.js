@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 export const getServerSideProps = async ({ params }) => {
-  const data = chapters.filter(chapter => chapter.id.toString() === params.id)
+  const data = chapters.filter(chapter => chapter.chapterId.toString() === params.chapterId)
 
   return {
     props: { chapter: data[0] }
