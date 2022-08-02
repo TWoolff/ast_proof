@@ -1,4 +1,4 @@
-import { chapters } from '../api/data'
+import { chapters } from '../../api/data'
 import Link from 'next/link'
 import Image from 'next/image'
 
