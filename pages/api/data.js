@@ -42,7 +42,7 @@ export const chapters = [
         "tooltip": "",
         "is_snack": false,
         "btn_text": "Næste",
-        "btn_link": ""
+        "btn_link": "1/page/2"
       },
       {
         "pageId": 2,
