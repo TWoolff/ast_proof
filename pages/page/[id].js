@@ -1,12 +1,10 @@
 import { chapters } from '../api/data'
-import Link from 'next/link'
-
 
 export const getServerSideProps = async ({ params }) => {
   const data = chapters.pages.filter(page => page.id.toString() === params.id)
 
   return {
-    props: { page: data.pages }
+    props: { page: data }
   }
 }
 

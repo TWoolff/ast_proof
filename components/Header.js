@@ -1,7 +1,7 @@
 const Header = () => {
   return ( 
     <header>
-      logo Servicetjek log af
+      Logo Servicetjek Log Af
     </header>
    );
 }
