@@ -27,15 +27,18 @@ export const chapters = [
           "value": "",
           "type": "dropdown",
           "options": [
+           
             {
               "label": "klare det online - og ringe til en rådgiver, hvis jeg er i tvivl.",
               "value": "klare_det_selv_online",
-              "link": "1/page/2"
+              "btn_link": "1/page/2",
+              "btn_text": "Næste"
             },
             {
               "label": "tale med en rådgiver, der hjælper mig.",
               "value": "sammen_med_en_raadgiver",
-              "link": "1/page/3"
+              "btn_link": "1/page/3",
+              "btn_text": "Næste"
             }
           ]
         },
