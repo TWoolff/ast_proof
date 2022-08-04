@@ -21,9 +21,14 @@ a {
 }
 
 main {
-  max-width: 1200px;
+  display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+  justify-content: center;
+  max-width: 1240px;
   margin: 0 auto;
   font-size: 26px;
+  padding: 0 20px;
 }
 
 .intro {
@@ -52,6 +57,30 @@ main {
   color: #222222;
 }
 
-.ast-select {
-  max-width: 30rem;
+.snack-background {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  right: 0;
+  zIndex: -1;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	border-bottom: 1px solid lightgrey;
+	background: white;
+	z-index: 99;
+}
+
+header .header-content {
+  display: flex;
+	align-items: center;
+  justify-content: space-between;
+	height: 80px;
+  padding: 0 20px;
+  max-width: 1240px;
+  margin: 0 auto;
 }

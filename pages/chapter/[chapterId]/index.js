@@ -1,6 +1,6 @@
+import parse from 'html-react-parser'
 import Link from 'next/link'
 import Image from 'next/image'
-import parse from 'html-react-parser'
 import {chapters} from '../../api/data'
 
 export const getServerSideProps = async ({params}) => {
@@ -12,11 +12,11 @@ export const getServerSideProps = async ({params}) => {
 }
 
 const Chapter = ({chapter}) => {
-  const {title, intro, image, btn_link, btn_text} = chapter
+  const {chapterId, title, intro, image, btn_link, btn_text} = chapter
 
   return ( 
     <section className='chapter'>
-      <h2>{title}</h2>
+      <h2>{chapterId} {title}</h2>
       <p>{parse(intro)}</p>
       <div className='btn-container'>
         <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>

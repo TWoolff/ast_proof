@@ -19,30 +19,26 @@ export const chapters = [
     "pages": [
       {
         "pageId": 1,
-        "text": "Jeg foretrækker at",
+        "text": "<span>Jeg foretrækker at</span>",
         "select": {
           "select_id": 1,
           "placeholder": "vælg",
-          "type": "dropdown",
           "options": [
             {
               "label": "klare det online - og ringe til en rådgiver, hvis jeg er i tvivl.",
               "value": "klare_det_selv_online",
-              "btn_link": "/chapter/1/page/2",
-              "btn_text": "Næste"
+              "btn_link": "/chapter/1/page/2"
             },
             {
               "label": "tale med en rådgiver, der hjælper mig.",
               "value": "sammen_med_en_raadgiver",
-              "btn_link": "/chapter/1/page/3",
-              "btn_text": "Næste"
+              "btn_link": "/chapter/1/page/3"
             }
           ]
         },
         "tooltip": "",
-        "is_snack": false,
         "btn_text": "Næste",
-        "btn_link": "1/page/2"
+        "is_snack": false
       },
       {
         "pageId": 2,
@@ -50,7 +46,7 @@ export const chapters = [
         "tooltip": "",
         "is_snack": true,
         "btn_text": "Næste",
-        "btn_link": "chapter/2/"
+        "btn_link": "/chapter/2"
       },
       {
         "pageId": 3,
@@ -58,7 +54,7 @@ export const chapters = [
         "tooltip": "",
         "is_snack": true,
         "btn_text": "Næste",
-        "btn_link": "chapter/2/"
+        "btn_link": "/chapter/2"
       }
     ]
   },

@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import {useState} from 'react'
+import Link from 'next/link'
 
 const InputSelect = props => {
   const {placeholder, options, btnTxt} = props
@@ -16,15 +16,15 @@ const InputSelect = props => {
   }
   
   return ( 
-    <div className='ast-select'>
-      <select value={selected} onChange={e => {handleSelect(e)}} required>
+    <>
+      <select value={selected} onChange={e => {handleSelect(e)}}>
         <option value='' hidden>{placeholder}</option>
         {selectOptions()}
       </select>
       <div className='btn-container'>
         <Link href={btnLink}><a className='btn'>{btnTxt}</a></Link>
       </div>
-    </div>
+    </>
   );
 }
  

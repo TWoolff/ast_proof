@@ -12,15 +12,13 @@ const Home = ({chapters}) => {
   const {intro, btn_link, btn_text, footnote} = chapters[0]
 
   return (
-      <main>
-        <div className='intro'>
-          {parse(intro)}
-          <div className='btn-container'>
-            <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
-          </div>
-          <p className='footnote'>{parse(footnote)}</p>
-        </div>
-      </main>
+    <section className='intro'>
+      {parse(intro)}
+      <div className='btn-container'>
+        <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
+      </div>
+      <p className='footnote'>{parse(footnote)}</p>
+    </section>
   )
 }
 

@@ -1,9 +1,13 @@
 const Header = () => {
   return ( 
     <header>
-      Logo Servicetjek Log Af
+      <div className='header-content'>
+        <a href='/'>Logo</a> 
+        <a href='/'>Servicetjek</a> 
+        <a href=''>Log Af</a>
+      </div>
     </header>
-   );
+   )
 }
  
-export default Header;
+export default Header
