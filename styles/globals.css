@@ -32,6 +32,11 @@ main {
   text-align: center;
 }
 
+.btn-container {
+  display: block;
+  margin-top: 3rem;
+}
+
 .btn {
   min-width: 213px;
   padding: 11px 40px 13px;
@@ -45,4 +50,8 @@ main {
   font-size: 16px;
   line-height: 1.5;
   color: #222222;
+}
+
+.ast-select {
+  max-width: 30rem;
 }

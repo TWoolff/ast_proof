@@ -16,7 +16,6 @@ export const chapters = [
     "image": "/kapitel1.png",
     "btn_text": "Næste",
     "btn_link": "1/page/1",
-
     "pages": [
       {
         "pageId": 1,
@@ -24,20 +23,18 @@ export const chapters = [
         "select": {
           "select_id": 1,
           "placeholder": "vælg",
-          "value": "",
           "type": "dropdown",
           "options": [
-           
             {
               "label": "klare det online - og ringe til en rådgiver, hvis jeg er i tvivl.",
               "value": "klare_det_selv_online",
-              "btn_link": "1/page/2",
+              "btn_link": "/chapter/1/page/2",
               "btn_text": "Næste"
             },
             {
               "label": "tale med en rådgiver, der hjælper mig.",
               "value": "sammen_med_en_raadgiver",
-              "btn_link": "1/page/3",
+              "btn_link": "/chapter/1/page/3",
               "btn_text": "Næste"
             }
           ]
@@ -72,7 +69,6 @@ export const chapters = [
     "image": "/kapitel2.png",
     "btn_text": "Næste",
     "btn_link": "2/page/1",
-
     "pages": []
   }
 ]

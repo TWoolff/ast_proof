@@ -1,6 +1,7 @@
-import {chapters} from '../../api/data'
 import Link from 'next/link'
 import Image from 'next/image'
+import parse from 'html-react-parser'
+import {chapters} from '../../api/data'
 
 export const getServerSideProps = async ({params}) => {
   const data = chapters.filter(chapter => chapter.chapterId.toString() === params.chapterId)
@@ -11,14 +12,18 @@ export const getServerSideProps = async ({params}) => {
 }
 
 const Chapter = ({chapter}) => {
+  const {title, intro, image, btn_link, btn_text} = chapter
+
   return ( 
-    <div>
-      <h2>{chapter.title}</h2>
-      <p>{chapter.intro}</p>
-      <Link href={chapter.btn_link}><a className='btn'>{chapter.btn_text}</a></Link>
-      <Image src={chapter.image} height={240} width={240} />
-    </div>
-   )
+    <section className='chapter'>
+      <h2>{title}</h2>
+      <p>{parse(intro)}</p>
+      <div className='btn-container'>
+        <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
+      </div>
+      <Image src={image} height={240} width={240} />
+    </section>
+  )
 }
  
 export default Chapter;

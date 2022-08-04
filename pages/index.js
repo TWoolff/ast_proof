@@ -1,6 +1,6 @@
-import {chapters} from './api/data'
 import Link from 'next/link'
-import parse from 'html-react-parser';
+import parse from 'html-react-parser'
+import {chapters} from './api/data'
 
 export const getServerSideProps = async () => {
   return {
@@ -9,12 +9,16 @@ export const getServerSideProps = async () => {
   }
   
 const Home = ({chapters}) => {
+  const {intro, btn_link, btn_text, footnote} = chapters[0]
+
   return (
       <main>
         <div className='intro'>
-          {parse(chapters[0].intro)}
-          <Link href={chapters[0].btn_link}><a className='btn'>{chapters[0].btn_text}</a></Link>
-          <p className='footnote'>{chapters[0].footnote}</p>
+          {parse(intro)}
+          <div className='btn-container'>
+            <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
+          </div>
+          <p className='footnote'>{parse(footnote)}</p>
         </div>
       </main>
   )
