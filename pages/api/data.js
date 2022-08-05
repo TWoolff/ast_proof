@@ -50,7 +50,7 @@ export const chapters = [
       },
       {
         "pageId": 3,
-        "text": "<p><strong>Vi er klar til at hjælpe dig</strong><br />Når du har gennemført dit årlige servicetjek, får du anbefalinger til, hvad der betaler sig for dig at gøre lige nu.</p><p>Anbefalingerne vil rådgiverne tale videre med dig om, når du ringer til os.</p>",
+        "text": "<p><strong>Vi er klar til at hjælpe dig</strong><br />Når du har gennemført dit årlige servicetjek, får du anbefalinger til, hvad der betaler sig for dig at gøre lige nu. Anbefalingerne vil rådgiverne tale videre med dig om, når du ringer til os.</p>",
         "tooltip": "",
         "is_snack": true,
         "btn_text": "Næste",
@@ -60,8 +60,8 @@ export const chapters = [
   },
   {
     "chapterId": 2,
-    "title": "Sparer du nok op??",
-    "intro": "Din pension er med til at sikre, at du har en god økonomi - fra du stopper med at arbejde og resten af livet. Se, hvad du kan forvente at få udbetalt sammenlignet med din løn i dag. Det giver dig et godt overblik over, om du sparer nok op.",
+    "title": "Sparer du nok op?",
+    "intro": "<p>Din pension er med til at sikre, at du har en god økonomi - fra du stopper med at arbejde og resten af livet.</p><p>Se, hvad du kan forvente at få udbetalt sammenlignet med din løn i dag. Det giver dig et godt overblik over, om du sparer nok op.</p>",
     "image": "/kapitel2.png",
     "btn_text": "Næste",
     "btn_link": "2/page/1",

@@ -3,11 +3,28 @@
   margin-top: 3rem;
 
   .btn {
+    display: inline-block;
     min-width: 213px;
-    padding: 11px 40px 13px;
+    padding: 11px 40px 13px 40px;
+    border: 1px solid $color-primary;
     border-radius: 25px;
-    color:$white;
+    color: $white;
     background-color: $color-primary;
     font-size: 1.125rem;
+    text-align: center;
+    transition: background-color 300ms ease-out;
+
+    &:hover {
+      background-color: $color-primary--hover;
+    }
+  }
+
+  .btn-secondary {
+    color: $color-primary;
+    background-color: $white;
+
+    &:hover {
+      color: $white;
+    }
   }
 }

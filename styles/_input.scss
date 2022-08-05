@@ -1,0 +1,30 @@
+.ast-select {
+	display: flex;
+	align-items: center;
+	position: relative;
+  width: fit-content;
+
+  select {
+    height: auto;
+    margin: 0;
+    padding: 0 36px 0 0;
+    max-width: 100%;
+    text-overflow: ellipsis;
+    border: none;
+    background: white none;
+    outline: none;
+    font-weight: 900;
+    font-size: inherit;
+    color: inherit;
+    appearance: none;
+    cursor: pointer;
+  }
+
+  select + svg {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    pointer-events: none;
+  }
+}

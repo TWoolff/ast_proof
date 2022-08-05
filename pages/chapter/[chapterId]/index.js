@@ -17,12 +17,14 @@ const Chapter = ({chapter}, {setCurrent}) => {
   return ( 
     <>
       <section className='chapter'>
-        <h2>{chapterId} {title}</h2>
-        <p>{parse(intro)}</p>
-        <div className='btn-container'>
-          <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
+        <div className='chapter-copy'>
+          <h2>{chapterId} {title}</h2>
+          <p>{parse(intro)}</p>
+          <div className='btn-container'>
+            <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
+          </div>
         </div>
-        <Image src={image} height={240} width={240} />
+        <Image src={image} height={240} width={240} className='chapter-img' />
       </section>
     </>
   )

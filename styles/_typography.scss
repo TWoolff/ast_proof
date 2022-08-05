@@ -1,0 +1,16 @@
+p, span, select, input {
+  font-weight: 400;
+  font-size: 26px;
+	line-height: 1.2;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 26px;
+  color: $color-primary;
+}
+
+strong {
+  color: $color-primary;
+  line-height: 2.5;
+}
