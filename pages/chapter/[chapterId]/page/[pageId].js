@@ -13,22 +13,24 @@ export const getServerSideProps = async ({params}) => {
 }
 
 const Page = ({page}) => {
-  const {text, select, is_snack, btn_link, btn_text} = page[0]
+  const {pageId, text, select, is_snack, btn_link, btn_text} = page[0]
 
   return ( 
-    <section className='page'>
-      {text && parse(text)}
-      {select && <InputSelect placeholder={select.placeholder} options={select.options} btnTxt={btn_text} />}
-      {is_snack && 
-        <>
-          <Background />
-          <div className='btn-container'>
-            <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
-          </div>
-        </>
-      }
-    </section>
-  );
+    <>
+      <section className='page'>
+        {text && parse(text)}
+        {select && <InputSelect placeholder={select.placeholder} options={select.options} btnTxt={btn_text} />}
+        {is_snack && 
+          <>
+            <Background />
+            <div className='btn-container'>
+              <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
+            </div>
+          </>
+        }
+      </section>
+    </>
+  )
 }
 
 export default Page; 

@@ -83,4 +83,32 @@ header .header-content {
   padding: 0 20px;
   max-width: 1240px;
   margin: 0 auto;
+  color: #92004d;
+}
+
+.progress {
+  display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	width: 1.5px;
+	height: 100%;
+	left: 3.25rem;
+	padding: 9rem 0;
+	z-index: 1;
+}
+
+.progress-section {
+  display: flex;
+	flex-grow: 2;
+	flex-direction: column;
+	width: 100%;
+	background-color: lightgrey;
+}
+
+.progress-fill {
+  display: block;
+  background-color: #92004d;
 }
