@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import Layout from '../components/Layout'
 import Navigation from '../components/Navigation'
-import '../styles/globals.css'
+import '../styles/index.scss'
 
 function MyApp({Component, pageProps}) {
   const [chapter, setChapter] = useState(null)

@@ -1,0 +1,20 @@
+header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	border-bottom: 1px solid $color-grey--60;
+	background: $white;
+	z-index: 99;
+
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0 20px;
+    max-width: 1240px;
+    margin: 0 auto;
+    color: $color-primary;
+  }
+}

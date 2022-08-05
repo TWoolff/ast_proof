@@ -1,0 +1,41 @@
+nav {
+	position: fixed;
+	top: 8rem;
+	left: 2rem;
+	height: calc(100% - 17rem);
+	z-index: 2;
+
+  .arrow-up {
+    top: 0;
+  } 
+
+  .arrow-down {
+    bottom: 0;
+  }
+
+  .progress {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    width: 1.5px;
+    height: 100%;
+    left: 20px;
+    padding: 2.5rem 0;
+    z-index: 1;
+
+    .progress-section {
+      display: flex;
+      flex-grow: 2;
+      flex-direction: column;
+      width: 100%;
+      background-color: $color-grey--60;
+
+      .progress-fill {
+        display: block;
+        background-color: $color-primary;
+      }
+    }
+  }
+}

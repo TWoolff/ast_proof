@@ -1,0 +1,13 @@
+.btn-container {
+  display: block;
+  margin-top: 3rem;
+
+  .btn {
+    min-width: 213px;
+    padding: 11px 40px 13px;
+    border-radius: 25px;
+    color:$white;
+    background-color: $color-primary;
+    font-size: 1.125rem;
+  }
+}
