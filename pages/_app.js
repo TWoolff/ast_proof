@@ -7,6 +7,11 @@ function MyApp({Component, pageProps}) {
   const [chapter, setChapter] = useState(null)
   const [page, setPage] = useState(null)
   const [snack, setSnack] = useState(null)
+  const [showNav, setShowNav] = useState(false)
+
+  const handleNavVisibility = (setShowNav) => {
+    setShowNav(setShowNav)
+  }
 
   const setCurrent = (chapterId, pageId, isSnack) => {
 		setChapter(chapterId)
@@ -17,8 +22,8 @@ function MyApp({Component, pageProps}) {
   return (
     <Layout>
       <main>
-        <Navigation chapter={chapter} page={page} snack={snack} />
-        <Component {...pageProps} setCurrent={ setCurrent } />
+        {showNav && <Navigation chapter={chapter} page={page} snack={snack} />}
+        <Component {...pageProps} setCurrent={setCurrent} handleNavVisibility={handleNavVisibility} />
       </main>
     </Layout>
   )

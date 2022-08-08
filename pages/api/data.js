@@ -5,9 +5,7 @@ export const chapters = [
     "intro": "<p>Hej Thomas</p><p>Velkommen til dit årlige servicetjek.</p><p>I servicetjekket opdaterer du os om dit liv her og nu og får anbefalinger, som passer til dig. Nogle ting ved vi på forhånd, andre skal du fortælle os. Du behøver kun at udfylde det, du selv ønsker.</p><p>Servicetjekket tager kun få minutter.</p>",
     "btn_text": "Start her",
     "btn_link": "/chapter/1",
-    "footnote": "Vi gemmer dine svar undervejs - så du kan roligt holde pause og vende tilbage, når det passer dig. Alle beløb er vejledende. Har du opsparing, som vi ikke kender, kan det påvirke vores anbefalinger til dig. Se, hvordan servicetjekket passer ind i GDPR.",
-    "result_btn_text": "Se anbefalinger",
-    "result_btn_link": "/resultat/"
+    "footnote": "Vi gemmer dine svar undervejs - så du kan roligt holde pause og vende tilbage, når det passer dig. Alle beløb er vejledende. Har du opsparing, som vi ikke kender, kan det påvirke vores anbefalinger til dig. <br/>Se, hvordan servicetjekket passer ind i <a href=''>GDPR</a>."
   },
   {
     "chapterId": 1,

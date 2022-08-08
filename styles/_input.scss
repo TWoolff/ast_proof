@@ -11,11 +11,11 @@
     max-width: 100%;
     text-overflow: ellipsis;
     border: none;
-    background: white none;
+    background: $color-white none;
     outline: none;
-    font-weight: 900;
-    font-size: inherit;
-    color: inherit;
+    font-weight: $fontweight-600;
+    font-size: $fontsize-default;
+    color: $color-black;
     appearance: none;
     cursor: pointer;
   }

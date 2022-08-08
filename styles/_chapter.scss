@@ -13,9 +13,14 @@
   margin: 0 auto;
   text-align: center;
 
+  .btn-container {
+    padding-top: 3rem;
+  }
+
   .footnote {
-    font-size: 16px;
-    line-height: 1.5;
-    color: $darkgrey;
+    font-size: $fontsize-small;
+    line-height: $lineheight-150;
+    color: $color-darkgrey;
+    margin-top: 3rem;
   }
 }

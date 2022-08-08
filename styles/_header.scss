@@ -3,8 +3,8 @@ header {
 	top: 0;
 	right: 0;
 	left: 0;
-	border-bottom: 1px solid $color-grey--60;
-	background: $white;
+	border-bottom: 1px solid $color-lightgrey;
+	background: $color-white;
 	z-index: 99;
 
   .header-content {
@@ -15,6 +15,22 @@ header {
     padding: 0 20px;
     max-width: 1240px;
     margin: 0 auto;
+    font-size: $fontsize-xs;
     color: $color-primary;
+
+    .header-title {
+      color: $color-secondary;
+    }
+
+    .header-logout {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: $fontsize-xs;
+        margin-right: 8px;
+        padding-top: 6px;
+      }
+    }
   }
 }

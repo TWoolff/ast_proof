@@ -1,6 +1,20 @@
-$color-primary: #92004d;
-$color-primary--hover: #660036;
-$color-grey--60: rgba(216, 212, 215, 0.6);
-$white: #fff;
-$darkgrey: #222222;
-$black: #000;
+$fontfamily-default: "Source Sans Pro", arial, sans-serif;
+
+$fontsize-default: 26px;
+$fontsize-small: 16px;
+$fontsize-xs: 0.875rem;
+
+$fontweight-400: 400;
+$fontweight-600: 600;
+
+$lineheight-normal: 1.2;
+$lineheight-150: 1.5;
+$lineheight-double: 2.5;
+
+$color-primary: rgb(146, 0, 77);
+$color-primary--hover: rgb(102, 0, 54);
+$color-secondary: rgb(206, 0, 96);
+$color-white: rgb(255, 255, 255);
+$color-lightgrey: rgba(216, 212, 215, 0.6);
+$color-darkgrey: rgb(34, 34, 34);
+$color-black: rgb(0, 0, 0);

@@ -11,9 +11,9 @@ export const getServerSideProps = async ({params}) => {
   }
 }
 
-const Chapter = ({chapter}, {setCurrent}) => {
+const Chapter = ({chapter}) => {
   const {chapterId, title, intro, image, btn_link, btn_text} = chapter
-  console.log(setCurrent)
+  
   return ( 
     <>
       <section className='chapter'>

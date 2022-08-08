@@ -8,7 +8,7 @@
     padding: 11px 40px 13px 40px;
     border: 1px solid $color-primary;
     border-radius: 25px;
-    color: $white;
+    color: $color-white;
     background-color: $color-primary;
     font-size: 1.125rem;
     text-align: center;
@@ -21,10 +21,10 @@
 
   .btn-secondary {
     color: $color-primary;
-    background-color: $white;
+    background-color: $color-white;
 
     &:hover {
-      color: $white;
+      color: $color-white;
     }
   }
 }

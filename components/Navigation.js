@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react'
 import {chapters} from '../pages/api/data'
 
 const Navigation = (props) => {
-  const { chapter, page, snack } = props
+  const {chapter, page, snack} = props
   const [fillHeight, setFillHeight] = useState('0%')
   const arrowUp = (
 		<svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
