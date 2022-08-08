@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import { AnimatePresence } from 'framer-motion'
 import Layout from '../components/Layout'
 import Navigation from '../components/Navigation'
 import '../styles/index.scss'
@@ -23,7 +24,9 @@ function MyApp({Component, pageProps}) {
     <Layout>
       <main>
         {showNav && <Navigation chapter={chapter} page={page} snack={snack} />}
-        <Component {...pageProps} setCurrent={setCurrent} handleNavVisibility={handleNavVisibility} />
+        <AnimatePresence exitBeforeEnter initial={false} >
+          <Component {...pageProps} setCurrent={setCurrent} handleNavVisibility={handleNavVisibility} />
+        </AnimatePresence>
       </main>
     </Layout>
   )
