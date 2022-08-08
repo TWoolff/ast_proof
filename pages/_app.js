@@ -7,7 +7,7 @@ function MyApp({Component, pageProps}) {
   const [chapter, setChapter] = useState(null)
   const [page, setPage] = useState(null)
   const [snack, setSnack] = useState(null)
-  const [showNav, setShowNav] = useState(false)
+  const [showNav, setShowNav] = useState(true)
 
   const handleNavVisibility = (setShowNav) => {
     setShowNav(setShowNav)

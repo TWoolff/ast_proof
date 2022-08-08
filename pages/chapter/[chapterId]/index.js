@@ -13,7 +13,6 @@ export const getServerSideProps = async ({params}) => {
 
 const Chapter = ({chapter}) => {
   const {chapterId, title, intro, image, btn_link, btn_text} = chapter
-  
   return ( 
     <>
       <section className='chapter'>
