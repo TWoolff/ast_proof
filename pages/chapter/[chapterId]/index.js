@@ -15,8 +15,8 @@ const Chapter = ({chapter}) => {
   const {chapterId, title, intro, image, btn_link, btn_text} = chapter
   return ( 
     <>
-      <section className='chapter'>
-        <div className='chapter-copy'>
+      <section className='chapter' data-chapter={chapterId}>
+        <div className='chapter-content'>
           <h2>{chapterId} {title}</h2>
           <p>{parse(intro)}</p>
           <div className='btn-container'>

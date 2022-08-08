@@ -4,8 +4,8 @@
 03. Map over chapters to create all chapters and pages
 04. Navigation and Progress
 05. Page-enter and -leave animations
-06. Handle multible select boxes in one page
-07. Chapter title and number on pages
+06. Handle multible select boxes on one page
+07. Chapter-title and -number on pages
 08. Input and Range fields
 09. Tooltip
 10. Result page

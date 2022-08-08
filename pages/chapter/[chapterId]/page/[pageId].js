@@ -17,7 +17,7 @@ const Page = ({page}) => {
 
   return ( 
     <>
-      <section className='page'>
+      <section className='page' data-page={pageId}>
         {text && parse(text)}
         {select && <InputSelect placeholder={select.placeholder} options={select.options} btnTxt={btn_text} />}
         {is_snack && 
