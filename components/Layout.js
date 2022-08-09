@@ -2,7 +2,6 @@ import Head from 'next/head'
 import Header from './Header'
 
 const Layout = ({...props}) => {
-
   return ( 
     <>
       <Head>
