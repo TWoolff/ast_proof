@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Header from './Header'
 
-const Layout = ({ ... props }) => {
+const Layout = ({...props}) => {
 
   return ( 
     <>
@@ -12,10 +12,10 @@ const Layout = ({ ... props }) => {
       </Head>
       <Header />
       <div className='content'> 
-        { props.children }
+        {props.children}
       </div>
    </>
-   )
+  )
 }
  
 export default Layout

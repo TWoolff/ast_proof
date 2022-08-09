@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { motion, AnimatePresence} from 'framer-motion'
+import {motion, AnimatePresence} from 'framer-motion'
 import Layout from '../components/Layout'
 import Navigation from '../components/Navigation'
 import '../styles/index.scss'
@@ -10,19 +10,19 @@ function MyApp({Component, pageProps, router}) {
   const [snack, setSnack] = useState(false)
   const [showNav, setShowNav] = useState(false)
 
-  const handleNavVisibility = (x) => {
+  const handleNavVisibility = x => {
     setShowNav(x)
   }
 
-  const setCurrentChapter = (chapterId) => {
+  const setCurrentChapter = chapterId => {
 		setChapter(chapterId)
 	}
 
-  const setCurrentPage = (pageId) => {
+  const setCurrentPage = pageId => {
 		setPage(pageId)
 	}
 
-  const setCurrentSnack = (snack) => {
+  const setCurrentSnack = snack => {
     setSnack(snack)
   }
 

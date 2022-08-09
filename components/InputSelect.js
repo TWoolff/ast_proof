@@ -11,14 +11,14 @@ const InputSelect = props => {
     return <option key={option.value} value={option.value} data-link={option.btn_link}>{option.label}</option>
   })
   
-  const handleSelect = (e) => {
+  const handleSelect = e => {
     const idx = e.target.selectedIndex
     const option = e.target.querySelectorAll('option')[idx]
     setBtnLink(option.getAttribute('data-link'))
     setSelected(e.target.value)
   }
 
-  const setSelectWidth = (e) => {
+  const setSelectWidth = e => {
 		const target = e ? e.target : ref.current;
 		const tempSelect = document.createElement('select');
 		const tempOption = document.createElement('option');
@@ -42,7 +42,7 @@ const InputSelect = props => {
   return ( 
     <>
       <div className='ast-select'>
-        <select value={selected} onChange={e => {handleSelect(e); setSelectWidth(e)}} ref={ ref }>
+        <select value={selected} onChange={e => {handleSelect(e); setSelectWidth(e)}} ref={ref}>
           <option value='' hidden>{placeholder}</option>
           {selectOptions()}
         </select>

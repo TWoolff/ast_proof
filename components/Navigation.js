@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {chapters} from '../pages/api/data'
 
-const Navigation = (props) => {
+const Navigation = props => {
   const {chapter, page, snack} = props
   const [fillHeight, setFillHeight] = useState('0%')
 
@@ -37,7 +37,7 @@ const Navigation = (props) => {
       <aside className='progress'>
         {chapters.map((chap, idx) => { 
           return (
-            <div className='progress-section' key={idx}>
+            <div className='progress-section' key={idx} data-key={idx}>
               <div className='progress-fill' style={{height : fillHeight, transition: 'height 2s ease'}} />
             </div>
           )
