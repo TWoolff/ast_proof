@@ -19,18 +19,15 @@ const Navigation = props => {
     </svg>
   )
 
-  const handleNavUp = () => {
-  }
+  const handleNavUp = () => {}
 
-  const handleNavDown = () => {
-  }
+  const handleNavDown = () => {}
 
   useEffect(() => {
     chapter ? setFillHeight('33%') : null
     page && !snack ? setFillHeight('66%') : null
     snack ? setFillHeight('100%') : null
   },[chapter, page, snack])
-
 
   return ( 
     <nav>
