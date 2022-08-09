@@ -19,25 +19,21 @@ const InputSelect = props => {
   }
 
   const setSelectWidth = e => {
-		const target = e ? e.target : ref.current;
-		const tempSelect = document.createElement('select');
-		const tempOption = document.createElement('option');
-
-		tempOption.textContent = target.options[target.selectedIndex].text;
-		tempSelect.style.cssText += 'visibility: hidden; position: fixed;';
-		tempSelect.appendChild(tempOption);
-		target.after(tempSelect);
-
-		const tempSelectWidth = tempSelect.getBoundingClientRect().width;
-		target.style.width = `${tempSelectWidth}px`;
-		tempSelect.remove();
-	};
-
-	useEffect(() => {
-		if (ref.current) {
-			setSelectWidth();
-		}
-	},[InputSelect]);
+    const target = e ? e.target : ref.current
+    const tempSelect = document.createElement('select')
+    const tempOption = document.createElement('option')
+    
+    tempOption.textContent = target.options[target.selectedIndex].text
+    tempSelect.style.cssText += 'visibility: hidden; position: fixed;'
+    tempSelect.appendChild(tempOption)
+    target.after(tempSelect)
+    
+    const tempSelectWidth = tempSelect.getBoundingClientRect().width
+    target.style.width = `${tempSelectWidth}px`
+    tempSelect.remove()
+  }
+  
+  useEffect(() => {if (ref.current) {setSelectWidth()}},[InputSelect])
   
   return ( 
     <>
@@ -58,4 +54,4 @@ const InputSelect = props => {
   );
 }
  
-export default InputSelect;
+export default InputSelect
