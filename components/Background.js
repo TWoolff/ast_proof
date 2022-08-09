@@ -13,7 +13,7 @@ const Background = () => {
         <motion.circle variants={item} opacity="0.05" cx="1417.4" cy="426.304" r="98.528" transform="rotate(-120 1417.4 426.304)" fill="#CE0060" />
       </motion.svg>
     </div>
-	)
+  )
 }
 
 export default Background
