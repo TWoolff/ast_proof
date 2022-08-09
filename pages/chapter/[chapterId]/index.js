@@ -1,8 +1,8 @@
 import parse from 'html-react-parser'
+import {useEffect} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import {chapters} from '../../api/data'
-import { useEffect } from 'react'
 
 export const getServerSideProps = async ({params}) => {
   const data = chapters.filter(chapter => chapter.chapterId.toString() === params.chapterId)
@@ -17,6 +17,7 @@ const Chapter = ({chapter, ...props}) => {
 
   useEffect(() => {
     props.handleNavVisibility(true)
+    props.setCurrentChapter(chapterId)
   }, [])
 
   return ( 

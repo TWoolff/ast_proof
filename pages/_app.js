@@ -5,20 +5,26 @@ import Navigation from '../components/Navigation'
 import '../styles/index.scss'
 
 function MyApp({Component, pageProps, router}) {
-  const [chapter, setChapter] = useState(null)
-  const [page, setPage] = useState(null)
-  const [snack, setSnack] = useState(null)
+  const [chapter, setChapter] = useState(0)
+  const [page, setPage] = useState(0)
+  const [snack, setSnack] = useState(false)
   const [showNav, setShowNav] = useState(false)
 
   const handleNavVisibility = (x) => {
     setShowNav(x)
   }
 
-  const setCurrent = (chapterId, pageId, isSnack) => {
+  const setCurrentChapter = (chapterId) => {
 		setChapter(chapterId)
-		setPage(pageId)
-    setSnack(isSnack)
 	}
+
+  const setCurrentPage = (pageId) => {
+		setPage(pageId)
+	}
+
+  const setCurrentSnack = (snack) => {
+    setSnack(snack)
+  }
 
   const variants = {
     hidden: {opacity: 0, x: 0, y: 700},
@@ -38,7 +44,14 @@ function MyApp({Component, pageProps, router}) {
             variants={variants}
             transition={{duration: 0.5, ease: 'easeIn'}} 
           >
-            <Component {...pageProps} setCurrent={setCurrent} handleNavVisibility={handleNavVisibility} router={router}/>
+            <Component 
+              {...pageProps} 
+              setCurrentChapter={setCurrentChapter} 
+              setCurrentPage={setCurrentPage} 
+              setCurrentSnack={setCurrentSnack} 
+              handleNavVisibility={handleNavVisibility} 
+              router={router}
+            />
           </motion.div>
         </AnimatePresence>
       </main>
