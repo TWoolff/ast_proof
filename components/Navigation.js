@@ -17,7 +17,7 @@ const Navigation = props => {
       <circle cx="21" cy="21" r="20.5" transform="rotate(90 21 21)" fill="white" stroke="#D8D4D7" />
       <path d="M28.0044 19.0735L20.9333 26.1446L13.8623 19.0735" stroke="#92004D" strokeWidth="2" />
     </svg>
-	)
+  )
 
   const handleNavUp = () => {
   }
