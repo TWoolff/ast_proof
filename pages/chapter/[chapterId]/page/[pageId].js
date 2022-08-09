@@ -47,4 +47,4 @@ const Page = ({page, ...props}) => {
   )
 }
 
-export default Page; 
+export default Page
