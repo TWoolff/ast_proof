@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import Link from 'next/link'
 import {chapters} from '../pages/api/data'
 
 const Navigation = props => {
@@ -19,10 +20,6 @@ const Navigation = props => {
     </svg>
   )
 
-  const handleNavUp = () => {}
-
-  const handleNavDown = () => {}
-
   useEffect(() => {
     chapter ? setFillHeight('33%') : null
     page && !snack ? setFillHeight('66%') : null
@@ -31,7 +28,7 @@ const Navigation = props => {
 
   return ( 
     <nav>
-      <a className='nav-up' onClick={handleNavUp} href='#'>{arrowUp}</a>
+      <Link href='' className='nav-up'>{arrowUp}</Link>
       <aside className='progress'>
         {chapters.map((chap, idx) => { 
           return (
@@ -41,7 +38,7 @@ const Navigation = props => {
           )
         })}
       </aside>
-      <a className='nav-down' onClick={handleNavDown} href='#'>{arrowDown}</a>
+      <Link href='' className='nav-down'>{arrowDown}</Link>
     </nav>
   )
 }
