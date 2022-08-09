@@ -31,6 +31,7 @@ const Navigation = props => {
     snack ? setFillHeight('100%') : null
   },[chapter, page, snack])
 
+
   return ( 
     <nav>
       <a className='nav-up' onClick={handleNavUp} href='#'>{arrowUp}</a>

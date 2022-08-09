@@ -4,7 +4,7 @@ import Layout from '../components/Layout'
 import Navigation from '../components/Navigation'
 import '../styles/index.scss'
 
-function MyApp({Component, pageProps, router}) {
+function App({Component, pageProps, router}) {
   const [chapter, setChapter] = useState(0)
   const [page, setPage] = useState(0)
   const [snack, setSnack] = useState(false)
@@ -59,4 +59,4 @@ function MyApp({Component, pageProps, router}) {
   )
 }
 
-export default MyApp
+export default App

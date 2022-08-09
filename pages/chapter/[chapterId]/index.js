@@ -36,4 +36,4 @@ const Chapter = ({chapter, ...props}) => {
   )
 }
  
-export default Chapter;
+export default Chapter
