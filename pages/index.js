@@ -8,7 +8,7 @@ export const getServerSideProps = async () => {
     }
   }
   
-const Home = ({chapters}) => {
+const Home = ({chapters, ...props}) => {
   const {intro, btn_link, btn_text, footnote} = chapters[0]
 
   return (

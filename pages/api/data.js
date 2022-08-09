@@ -10,7 +10,7 @@ export const chapters = [
   {
     "chapterId": 1,
     "title": "Hvordan hjælper vi dig bedst?",
-    "intro": "I PKA kan du klare din pension online, og du kan også altid tale med en rådgiver. Vælg, hvad du foretrækker.",
+    "intro": "<p>I PKA kan du klare din pension online, og du kan også altid tale med en rådgiver. Vælg, hvad du foretrækker.</p>",
     "image": "/kapitel1.png",
     "btn_text": "Næste",
     "btn_link": "1/page/1",

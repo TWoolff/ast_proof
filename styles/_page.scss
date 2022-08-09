@@ -1,5 +1,11 @@
 .page {
   max-width: 680px;
+
+  .page-info {
+    position: absolute;
+    top: 9rem;
+    font-weight: $fontweight-600;
+  }
 }
 
 .snack-background {

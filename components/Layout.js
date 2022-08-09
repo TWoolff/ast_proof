@@ -1,15 +1,8 @@
-import {motion} from 'framer-motion'
 import Head from 'next/head'
 import Header from './Header'
 
-const variants = {
-  hidden: {opacity: 0, x: 0, y: -200},
-  enter: {opacity: 1, x: 0, y: 0},
-  exit: {opacity: 0, x: 0, y: 100}
-}
+const Layout = ({ ... props }) => {
 
-const Layout = ({ children }) => {
-  
   return ( 
     <>
       <Head>
@@ -18,15 +11,9 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <motion.div 
-        initial='hidden'
-        animate='enter'
-        exit='exit'
-        variants={variants}
-        transition={{duration: 1, ease: 'easeInOut'}}
-        className='content'> 
-        { children }
-      </motion.div>
+      <div className='content'> 
+        { props.children }
+      </div>
    </>
    )
 }
