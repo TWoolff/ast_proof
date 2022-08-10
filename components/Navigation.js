@@ -28,17 +28,17 @@ const Navigation = props => {
 
   return ( 
     <nav>
-      <Link href='' className='nav-up'>{arrowUp}</Link>
+      <Link href='' className='nav-up'><a>{arrowUp}</a></Link>
       <aside className='progress'>
         {chapters.map((chap, idx) => { 
           return (
             <div className='progress-section' key={idx} data-key={idx}>
-              <div className='progress-fill' style={{height : fillHeight, transition: 'height 2s ease'}} />
+              <div className='progress-fill' style={idx === chapter - 1 ? {height: fillHeight} : {}} />
             </div>
           )
         })}
       </aside>
-      <Link href='' className='nav-down'>{arrowDown}</Link>
+      <Link href='' className='nav-down'><a>{arrowDown}</a></Link>
     </nav>
   )
 }

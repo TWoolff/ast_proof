@@ -7,7 +7,7 @@ import Background from '../../../../components/Background'
 
 export const getServerSideProps = async ({params}) => {
   // to do: map over chapters
-  const data = chapters[1].pages.filter(page => page.pageId.toString() === params.pageId)
+  const data = chapters[0].pages.filter(page => page.pageId.toString() === params.pageId)
 
   return {
     props: {page: data}

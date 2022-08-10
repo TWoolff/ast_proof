@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import parse from 'html-react-parser'
-import {chapters} from './api/data'
+import {home} from './api/data'
 
 export const getServerSideProps = async () => {
   return {
-      props: {chapters}
+      props: {home}
     }
   }
   
-const Home = ({chapters}) => {
-  const {intro, btn_link, btn_text, footnote} = chapters[0]
+const Home = ({home}) => {
+  const {intro, btn_link, btn_text, footnote} = home
 
   return (
     <section className='intro'>

@@ -37,6 +37,7 @@ nav {
       .progress-fill {
         display: block;
         background-color: $color-primary;
+        transition: height 2s ease;
       }
     }
   }
