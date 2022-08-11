@@ -18,8 +18,13 @@ export const chapters = [
       {
         "pageId": 1,
         "text": "<span>Jeg foretrækker at</span>",
-        "select": {
-          "select_id": 1,
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/2",
+        "input": {
+          "input_id": 1,
+          "type": "select",
           "placeholder": "vælg",
           "options": [
             {
@@ -33,10 +38,7 @@ export const chapters = [
               "btn_link": "/chapter/1/page/3"
             }
           ]
-        },
-        "tooltip": "",
-        "btn_text": "Næste",
-        "is_snack": false
+        }
       },
       {
         "pageId": 2,
@@ -70,7 +72,14 @@ export const chapters = [
         "tooltip": "",
         "is_snack": false,
         "btn_text": "Næste",
-        "btn_link": ""
+        "btn_link": "/chapter/2/page/2",
+        "input": {
+          "input_id": 1,
+          "type": "text",
+          "name": "loen",
+          "placeholder": "beløb",
+          "label": "kr."
+        }
       },
       {
         "pageId": 2,
@@ -88,7 +97,8 @@ export const chapters = [
     "intro": "<p>Når din jobsituation ændrer sig, har det betydning for din pension og de forsikringer, der følger med. Se, hvordan dit arbejdsliv påvirker din pension.</p>",
     "image": "/kapitel3.png",
     "btn_text": "Næste",
-    "btn_link": "3/page/1"
+    "btn_link": "3/page/1",
+    "pages": []
   },
   {
     "chapterId": 4,
@@ -96,7 +106,8 @@ export const chapters = [
     "intro": "<p>Hvordan skal dit liv være, når du ikke længere arbejder? Det har betydning for, hvor meget du skal spare op nu.</p>",
     "image": "/kapitel4.png",
     "btn_text": "Næste",
-    "btn_link": "4/page/1"
+    "btn_link": "4/page/1",
+    "pages": []
   },
   {
     "chapterId": 5,
@@ -104,7 +115,8 @@ export const chapters = [
     "intro": "<p>Indbetaler du lidt ekstra hver måned i pension nu, kan det gøre en stor forskel i din hverdag, når du ikke længere arbejder. Se, hvad forskellige beløb kan blive til i din pensionsopsparing.</p>",
     "image": "/kapitel5.png",
     "btn_text": "Næste",
-    "btn_link": "5/page/1"
+    "btn_link": "5/page/1",
+    "pages": []
   },
   {
     "chapterId": 6,
@@ -112,7 +124,8 @@ export const chapters = [
     "intro": "<p>Har du pensionsopsparinger andre steder, fx fra tidligere jobs eller i din bank? Så kan det tit betale sig at samle dem ét sted.</p>",
     "image": "/kapitel6.png",
     "btn_text": "Næste",
-    "btn_link": "6/page/1"
+    "btn_link": "6/page/1",
+    "pages": []
   },
   {
     "chapterId": 7,
@@ -120,7 +133,8 @@ export const chapters = [
     "intro": "<p>Når du dør, får dine efterladte penge fra din pensionsordning. Du kan selv vælge, hvem der skal have pengene. Som udgangspunkt går pengene til dine nærmeste pårørende.<br/></p><p></p>Se, om du sikrer de rigtige.",
     "image": "/kapitel7.png",
     "btn_text": "Næste",
-    "btn_link": "7/page/1"
+    "btn_link": "7/page/1",
+    "pages": []
   },
   {
     "chapterId": 8,
@@ -128,6 +142,24 @@ export const chapters = [
     "intro": "<p>Med i din pensionsordning har du forsikringer, der sikrer dig og din familie økonomisk. Se, hvordan du er dækket.</p>",
     "image": "/kapitel8.png",
     "btn_text": "Næste",
-    "btn_link": "8/page/1"
+    "btn_link": "8/page/1",
+    "pages": [
+      {
+        "pageId": 1,
+        "text": "<p><strong>Forsikringerne dækker dig og din familie</strong></p><p>Dine forsikringer er sat sammen efter din faggruppe og dit arbejdsliv. De følger med i din pensionsordning – du skal ikke gøre noget. Du og din familie er sikret ved sygdom og død.</p><p>Formålet er, at du – hvis livet ændrer sig – kan opretholde en rimelig indtægt og sikre dig og din familie.</p><p>På næste side kan du se, hvad du får udbetalt fra PKA bl.a. som supplement til de offentlige pensioner.</p>",
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/8/page/2"
+      },
+      {
+        "pageId": 2,
+        "text": "<p>Du kan søge om at få udbetalt:</p>",
+        "tooltip": "<p>Alle beløb er vejledende og tager udgangspunkt i din nuværende situation. Hvis fx indbetalingen ændrer sig, ændres beløbenes størrelse også.</p>",
+        "is_snack": true,
+        "btn_text": "Se anbefalinger",
+        "btn_link": "/resultatside"
+      }
+    ]
   }
 ]

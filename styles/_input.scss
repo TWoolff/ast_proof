@@ -1,4 +1,4 @@
-.ast-select {
+.ast-input {
 	display: flex;
 	align-items: center;
 	position: relative;
@@ -26,5 +26,17 @@
     top: 2px;
     right: 5px;
     pointer-events: none;
+  }
+
+  input[type=text] {
+    border: none;
+    background: $color-white none;
+    outline: none;
+  }
+
+  input[type=range] {
+    border: none;
+    background: $color-white none;
+    outline: none;
   }
 }

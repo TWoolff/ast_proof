@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import Link from 'next/link'
-import {chapters} from '../pages/api/data'
+import {chapters} from '@/api/data'
 
 const Navigation = props => {
   const {chapter, page, snack} = props

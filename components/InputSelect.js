@@ -37,7 +37,7 @@ const InputSelect = props => {
   
   return ( 
     <>
-      <div className='ast-select'>
+      <div className='ast-input'>
         <select value={selected} onChange={e => {handleSelect(e); setSelectWidth(e)}} ref={ref}>
           <option value='' hidden>{placeholder}</option>
           {selectOptions()}

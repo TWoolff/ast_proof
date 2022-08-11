@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import parse from 'html-react-parser'
-import {home} from './api/data'
+import {home} from '@/api/data'
 
 export const getServerSideProps = async () => {
   return {

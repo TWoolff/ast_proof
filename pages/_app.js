@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
-import Layout from '../components/Layout'
-import Navigation from '../components/Navigation'
-import '../styles/index.scss'
+import Layout from '@/components/Layout'
+import Navigation from '@/components/Navigation'
+import '@/styles/index.scss'
 
 function App({Component, pageProps, router}) {
   const [chapter, setChapter] = useState(0)
