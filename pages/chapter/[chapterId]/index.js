@@ -14,25 +14,25 @@ export const getServerSideProps = async ({params}) => {
 
 const Chapter = ({chapter, ...props}) => {
   const {chapterId, title, intro, image, btn_link, btn_text} = chapter
+  const {handleNavVisibility, setCurrentChapter, setCurrentPage} = props
 
   useEffect(() => {
-    props.handleNavVisibility(true)
-    props.setCurrentChapter(chapterId)
+    handleNavVisibility(true)
+    setCurrentChapter(chapterId)
+    setCurrentPage(0)
   }, [])
 
   return ( 
-    <>
-      <section className='chapter'>
-        <div className='chapter-content'>
-          <h2>{chapterId} {title}</h2>
-          {parse(intro)}
-          <div className='btn-container'>
-            <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
-          </div>
+    <section className='chapter'>
+      <div className='chapter-content'>
+        <h2>{chapterId} {title}</h2>
+        {parse(intro)}
+        <div className='btn-container'>
+          <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
         </div>
-        <Image src={image} height={240} width={240} className='chapter-img' />
-      </section>
-    </>
+      </div>
+      <Image src={image} height={240} width={240} className='chapter-img' />
+    </section>
   )
 }
  
