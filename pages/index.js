@@ -9,10 +9,11 @@ export const getServerSideProps = async () => {
   }
   
 const Home = ({home}) => {
-  const {intro, btn_link, btn_text, footnote} = home
+  const {user_name, intro, btn_link, btn_text, footnote} = home
 
   return (
     <section className='intro'>
+      <p>Hej {user_name}</p>
       {parse(intro)}
       <div className='btn-container'>
         <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>

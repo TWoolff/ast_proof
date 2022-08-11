@@ -18,8 +18,8 @@ const Chapter = ({chapter, ...props}) => {
 
   useEffect(() => {
     handleNavVisibility(true)
-    setCurrentChapter(chapterId)
     setCurrentPage(0)
+    setCurrentChapter(chapterId)
   }, [])
 
   return ( 

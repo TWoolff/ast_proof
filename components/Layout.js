@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Header from './Header'
 
 const Layout = ({...props}) => {
+  const {children} = props
+  
   return ( 
     <>
       <Head>
@@ -11,7 +13,7 @@ const Layout = ({...props}) => {
       </Head>
       <Header />
       <div className='content'> 
-        {props.children}
+        {children}
       </div>
    </>
   )

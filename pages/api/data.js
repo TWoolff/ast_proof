@@ -1,8 +1,9 @@
 export const home = {
-  "intro": "<p>Hej Thomas</p><p>Velkommen til dit årlige servicetjek.</p><p>I servicetjekket opdaterer du os om dit liv her og nu og får anbefalinger, som passer til dig. Nogle ting ved vi på forhånd, andre skal du fortælle os. Du behøver kun at udfylde det, du selv ønsker.</p><p>Servicetjekket tager kun få minutter.</p>",
+  "user_name": "Thomas",
+  "intro": "<p>Velkommen til dit årlige servicetjek.</p><p>I servicetjekket opdaterer du os om dit liv her og nu og får anbefalinger, som passer til dig. Nogle ting ved vi på forhånd, andre skal du fortælle os. Du behøver kun at udfylde det, du selv ønsker.</p><p>Servicetjekket tager kun få minutter.</p>",
   "btn_text": "Start her",
   "btn_link": "/chapter/1",
-  "footnote": "Vi gemmer dine svar undervejs - så du kan roligt holde pause og vende tilbage, når det passer dig. Alle beløb er vejledende. Har du opsparing, som vi ikke kender, kan det påvirke vores anbefalinger til dig. <br/>Se, hvordan servicetjekket passer ind i <a href=''>GDPR</a>."
+  "footnote": "Vi gemmer dine svar undervejs - så du kan roligt holde pause og vende tilbage, når det passer dig. Alle beløb er vejledende. Har du opsparing, som vi ikke kender, kan det påvirke vores anbefalinger til dig. <br/>Se, hvordan servicetjekket passer ind i <a href='#'>GDPR</a>."
 }
 
 export const chapters = [
@@ -62,6 +63,71 @@ export const chapters = [
     "image": "/kapitel2.png",
     "btn_text": "Næste",
     "btn_link": "2/page/1",
-    "pages": []
+    "pages": [
+      {
+        "pageId": 1,
+        "text": "<span>Min løn om måneden før skat er</span>",
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": ""
+      },
+      {
+        "pageId": 2,
+        "text": "<p><strong>Du vil få udbetalt omkring 24.744 kr. om måneden før skat, mens du er på pension. Det svarer til 77% af din løn.</strong></p><p>Du er godt på vej til at nå op på de mindst 70-80 %, som vi anbefaler. Det er vigtigt, hvis du skal have nok at leve af, når du går på pension.</p>",
+        "tooltip": "<p>Vi har omregnet alle dine pensioner i PKA til et forventet månedligt gennemsnit før skat, fra din folkepensionsalder og resten af dit liv. Hvordan du får din pension udbetalt afhænger af, hvilke pensionsopsparinger du har - det kan være en kombination af engangsudbetalinger, pension, der udbetales over en årrække og pension, der udbetales resten af livet. Folkepensionen er med, men folkepensionens tillæg er ikke med. Beregningen er uden tal fra PensionsInfo. Har du opsparinger andre steder, kan det påvirke resultatet og vores anbefalinger til dig.</p>",
+        "is_snack": true,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/3"
+      }
+    ]
+  },
+  {
+    "chapterId": 3,
+    "title": "Dit arbejdsliv",
+    "intro": "<p>Når din jobsituation ændrer sig, har det betydning for din pension og de forsikringer, der følger med. Se, hvordan dit arbejdsliv påvirker din pension.</p>",
+    "image": "/kapitel3.png",
+    "btn_text": "Næste",
+    "btn_link": "3/page/1"
+  },
+  {
+    "chapterId": 4,
+    "title": "Se, hvornår du kan gå på pension",
+    "intro": "<p>Hvordan skal dit liv være, når du ikke længere arbejder? Det har betydning for, hvor meget du skal spare op nu.</p>",
+    "image": "/kapitel4.png",
+    "btn_text": "Næste",
+    "btn_link": "4/page/1"
+  },
+  {
+    "chapterId": 5,
+    "title": "Få det bedste ud af din pension",
+    "intro": "<p>Indbetaler du lidt ekstra hver måned i pension nu, kan det gøre en stor forskel i din hverdag, når du ikke længere arbejder. Se, hvad forskellige beløb kan blive til i din pensionsopsparing.</p>",
+    "image": "/kapitel5.png",
+    "btn_text": "Næste",
+    "btn_link": "5/page/1"
+  },
+  {
+    "chapterId": 6,
+    "title": "Saml dine pensioner",
+    "intro": "<p>Har du pensionsopsparinger andre steder, fx fra tidligere jobs eller i din bank? Så kan det tit betale sig at samle dem ét sted.</p>",
+    "image": "/kapitel6.png",
+    "btn_text": "Næste",
+    "btn_link": "6/page/1"
+  },
+  {
+    "chapterId": 7,
+    "title": "Hvem skal have pengene efter dig?",
+    "intro": "<p>Når du dør, får dine efterladte penge fra din pensionsordning. Du kan selv vælge, hvem der skal have pengene. Som udgangspunkt går pengene til dine nærmeste pårørende.<br/></p><p></p>Se, om du sikrer de rigtige.",
+    "image": "/kapitel7.png",
+    "btn_text": "Næste",
+    "btn_link": "7/page/1"
+  },
+  {
+    "chapterId": 8,
+    "title": "Dine forsikringer",
+    "intro": "<p>Med i din pensionsordning har du forsikringer, der sikrer dig og din familie økonomisk. Se, hvordan du er dækket.</p>",
+    "image": "/kapitel8.png",
+    "btn_text": "Næste",
+    "btn_link": "8/page/1"
   }
 ]
