@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 import Layout from '@/components/Layout'
 import Navigation from '@/components/Navigation'
@@ -10,6 +10,7 @@ function App({Component, pageProps, router}) {
   const [snack, setSnack] = useState(false)
   const [showNav, setShowNav] = useState(false)
   const [btnLink, setBtnLink] = useState(null)
+  const [navVariants, setNavVariants] = useState('down')
 
   const handleNavVisibility = x => {
     setShowNav(x)
@@ -31,22 +32,31 @@ function App({Component, pageProps, router}) {
     setBtnLink(btnLink)
   }
 
-  const variants = {
-    hidden: {opacity: 0, x: 0, y: 700},
-    enter: {opacity: 1, x: 0, y: 0},
-    exit: {opacity: 0, x: 0, y: -700}
+  const handleNavVariants = updown => {
+    setNavVariants(updown)
   }
+
+  useEffect(() => {
+    setNavVariants('down')
+  },[chapter, page, snack])
 
   return (
     <Layout>
       <main>
-        {showNav && <Navigation chapter={chapter} page={page} snack={snack} btnLink={btnLink} />}
+        {showNav && 
+          <Navigation 
+            chapter={chapter} 
+            page={page} 
+            snack={snack} 
+            btnLink={btnLink} 
+            handleNavVariants={handleNavVariants}
+          />
+        }
         <AnimatePresence>
           <motion.div key={router.route} 
-            initial='hidden'
-            animate='enter'
-            exit='exit'
-            variants={variants}
+            initial={{opacity: 0, x: 0, y: navVariants === 'down' ? 700 : -700}}
+            animate={{opacity: 1, x: 0, y: 0}}
+            exit={{opacity: 0, x: 0, y: navVariants === 'down' ? -700 : 700}}
             transition={{duration: 0.5, ease: 'easeIn'}} 
           >
             <Component 
@@ -56,6 +66,7 @@ function App({Component, pageProps, router}) {
               setCurrentSnack={setCurrentSnack}
               setNextLink={setNextLink}
               handleNavVisibility={handleNavVisibility} 
+              handleNavVariants={handleNavVariants}
               router={router}
             />
           </motion.div>

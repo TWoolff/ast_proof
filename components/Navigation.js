@@ -4,7 +4,7 @@ import Link from 'next/link'
 import {chapters} from '@/api/data'
 
 const Navigation = props => {
-  const {chapter, page, snack, btnLink} = props
+  const {chapter, page, snack, btnLink, handleNavVariants} = props
   const [fillHeight, setFillHeight] = useState('0%')
 
   const arrowUp = (
@@ -21,6 +21,11 @@ const Navigation = props => {
     </svg>
   )
 
+  const handleClick = () => {
+    Router.back()
+    handleNavVariants('up')
+  }
+
   useEffect(() => {
     chapter ? setFillHeight('33%') : null
     page && !snack ? setFillHeight('66%') : null
@@ -29,7 +34,7 @@ const Navigation = props => {
 
   return ( 
     <nav>
-      <a className='nav-up' onClick={() => Router.back()}>{arrowUp}</a>
+      <a className='nav-up' onClick={() => handleClick()}>{arrowUp}</a>
       <aside className='progress'>
         {chapters.map((chap, idx) => { 
           return (

@@ -11,10 +11,11 @@ export const getServerSideProps = async () => {
   
 const Home = ({home, ...props}) => {
   const {user_name, intro, btn_link, btn_text, footnote} = home
-  const {handleNavVisibility} = props
+  const {handleNavVisibility, handleNavVariants} = props
 
   useEffect(() => {
     handleNavVisibility(false)
+    handleNavVariants('down')
   })
 
   return (
