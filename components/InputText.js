@@ -6,7 +6,7 @@ const InputText = props => {
   return (
     <div className='ast-input'>
       <input type='text' name={name} placeholder={placeholder} />
-      <label for={name}>{label}</label>
+      <label htmlFor={name}>{label}</label>
       <div className='btn-container'>
         <Link href={btnLink}><a className='btn btn-secondary'>{btnTxt}</a></Link>
       </div>

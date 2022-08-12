@@ -5,12 +5,12 @@ nav {
 	height: calc(100% - 17rem);
 	z-index: 2;
 
-  .arrow-up {
+  .nav-up {
     top: 0;
     cursor: pointer;
   } 
 
-  .arrow-down {
+  .nav-down {
     bottom: 0;
     cursor: pointer;
   }
@@ -39,6 +39,10 @@ nav {
         background-color: $color-primary;
         transition: height 2s ease;
       }
+    }
+
+    .progress-read {
+      background-color: $color-primary;
     }
   }
 }

@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import Link from 'next/link'
 import parse from 'html-react-parser'
 import {home} from '@/api/data'
@@ -8,8 +9,13 @@ export const getServerSideProps = async () => {
     }
   }
   
-const Home = ({home}) => {
+const Home = ({home, ...props}) => {
   const {user_name, intro, btn_link, btn_text, footnote} = home
+  const {handleNavVisibility} = props
+
+  useEffect(() => {
+    handleNavVisibility(false)
+  })
 
   return (
     <section className='intro'>

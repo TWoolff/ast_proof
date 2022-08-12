@@ -9,6 +9,7 @@ function App({Component, pageProps, router}) {
   const [page, setPage] = useState(0)
   const [snack, setSnack] = useState(false)
   const [showNav, setShowNav] = useState(false)
+  const [btnLink, setBtnLink] = useState(null)
 
   const handleNavVisibility = x => {
     setShowNav(x)
@@ -26,6 +27,10 @@ function App({Component, pageProps, router}) {
     setSnack(snack)
   }
 
+  const setNextLink = btnLink => {
+    setBtnLink(btnLink)
+  }
+
   const variants = {
     hidden: {opacity: 0, x: 0, y: 700},
     enter: {opacity: 1, x: 0, y: 0},
@@ -35,7 +40,7 @@ function App({Component, pageProps, router}) {
   return (
     <Layout>
       <main>
-        {showNav && <Navigation chapter={chapter} page={page} snack={snack} />}
+        {showNav && <Navigation chapter={chapter} page={page} snack={snack} btnLink={btnLink} />}
         <AnimatePresence>
           <motion.div key={router.route} 
             initial='hidden'
@@ -48,7 +53,8 @@ function App({Component, pageProps, router}) {
               {...pageProps} 
               setCurrentChapter={setCurrentChapter} 
               setCurrentPage={setCurrentPage} 
-              setCurrentSnack={setCurrentSnack} 
+              setCurrentSnack={setCurrentSnack}
+              setNextLink={setNextLink}
               handleNavVisibility={handleNavVisibility} 
               router={router}
             />

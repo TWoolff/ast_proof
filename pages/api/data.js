@@ -98,7 +98,24 @@ export const chapters = [
     "image": "/kapitel3.png",
     "btn_text": "Næste",
     "btn_link": "3/page/1",
-    "pages": []
+    "pages": [
+      {
+        "pageId": 1,
+        "text": "<span>Min løn om måneden før skat er</span>",
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/3/page/2",
+      },
+      {
+        "pageId": 2,
+        "text": "<p><strong>Du vil få udbetalt omkring 24.744 kr. om måneden før skat, mens du er på pension. Det svarer til 77% af din løn.</strong></p><p>Du er godt på vej til at nå op på de mindst 70-80 %, som vi anbefaler. Det er vigtigt, hvis du skal have nok at leve af, når du går på pension.</p>",
+        "tooltip": "<p>Vi har omregnet alle dine pensioner i PKA til et forventet månedligt gennemsnit før skat, fra din folkepensionsalder og resten af dit liv. Hvordan du får din pension udbetalt afhænger af, hvilke pensionsopsparinger du har - det kan være en kombination af engangsudbetalinger, pension, der udbetales over en årrække og pension, der udbetales resten af livet. Folkepensionen er med, men folkepensionens tillæg er ikke med. Beregningen er uden tal fra PensionsInfo. Har du opsparinger andre steder, kan det påvirke resultatet og vores anbefalinger til dig.</p>",
+        "is_snack": true,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/4"
+      }
+    ]
   },
   {
     "chapterId": 4,
@@ -107,7 +124,24 @@ export const chapters = [
     "image": "/kapitel4.png",
     "btn_text": "Næste",
     "btn_link": "4/page/1",
-    "pages": []
+    "pages": [
+      {
+        "pageId": 1,
+        "text": "<span>Min løn om måneden før skat er</span>",
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/4/page/2",
+      },
+      {
+        "pageId": 2,
+        "text": "<p><strong>Du vil få udbetalt omkring 24.744 kr. om måneden før skat, mens du er på pension. Det svarer til 77% af din løn.</strong></p><p>Du er godt på vej til at nå op på de mindst 70-80 %, som vi anbefaler. Det er vigtigt, hvis du skal have nok at leve af, når du går på pension.</p>",
+        "tooltip": "<p>Vi har omregnet alle dine pensioner i PKA til et forventet månedligt gennemsnit før skat, fra din folkepensionsalder og resten af dit liv. Hvordan du får din pension udbetalt afhænger af, hvilke pensionsopsparinger du har - det kan være en kombination af engangsudbetalinger, pension, der udbetales over en årrække og pension, der udbetales resten af livet. Folkepensionen er med, men folkepensionens tillæg er ikke med. Beregningen er uden tal fra PensionsInfo. Har du opsparinger andre steder, kan det påvirke resultatet og vores anbefalinger til dig.</p>",
+        "is_snack": true,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/5"
+      }
+    ]
   },
   {
     "chapterId": 5,
@@ -116,7 +150,24 @@ export const chapters = [
     "image": "/kapitel5.png",
     "btn_text": "Næste",
     "btn_link": "5/page/1",
-    "pages": []
+    "pages": [
+      {
+        "pageId": 1,
+        "text": "<span>Min løn om måneden før skat er</span>",
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/5/page/2",
+      },
+      {
+        "pageId": 2,
+        "text": "<p><strong>Du vil få udbetalt omkring 24.744 kr. om måneden før skat, mens du er på pension. Det svarer til 77% af din løn.</strong></p><p>Du er godt på vej til at nå op på de mindst 70-80 %, som vi anbefaler. Det er vigtigt, hvis du skal have nok at leve af, når du går på pension.</p>",
+        "tooltip": "<p>Vi har omregnet alle dine pensioner i PKA til et forventet månedligt gennemsnit før skat, fra din folkepensionsalder og resten af dit liv. Hvordan du får din pension udbetalt afhænger af, hvilke pensionsopsparinger du har - det kan være en kombination af engangsudbetalinger, pension, der udbetales over en årrække og pension, der udbetales resten af livet. Folkepensionen er med, men folkepensionens tillæg er ikke med. Beregningen er uden tal fra PensionsInfo. Har du opsparinger andre steder, kan det påvirke resultatet og vores anbefalinger til dig.</p>",
+        "is_snack": true,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/6"
+      }
+    ]
   },
   {
     "chapterId": 6,
@@ -125,7 +176,24 @@ export const chapters = [
     "image": "/kapitel6.png",
     "btn_text": "Næste",
     "btn_link": "6/page/1",
-    "pages": []
+    "pages": [
+      {
+        "pageId": 1,
+        "text": "<span>Min løn om måneden før skat er</span>",
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/6/page/2",
+      },
+      {
+        "pageId": 2,
+        "text": "<p><strong>Du vil få udbetalt omkring 24.744 kr. om måneden før skat, mens du er på pension. Det svarer til 77% af din løn.</strong></p><p>Du er godt på vej til at nå op på de mindst 70-80 %, som vi anbefaler. Det er vigtigt, hvis du skal have nok at leve af, når du går på pension.</p>",
+        "tooltip": "<p>Vi har omregnet alle dine pensioner i PKA til et forventet månedligt gennemsnit før skat, fra din folkepensionsalder og resten af dit liv. Hvordan du får din pension udbetalt afhænger af, hvilke pensionsopsparinger du har - det kan være en kombination af engangsudbetalinger, pension, der udbetales over en årrække og pension, der udbetales resten af livet. Folkepensionen er med, men folkepensionens tillæg er ikke med. Beregningen er uden tal fra PensionsInfo. Har du opsparinger andre steder, kan det påvirke resultatet og vores anbefalinger til dig.</p>",
+        "is_snack": true,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/7"
+      }
+    ]
   },
   {
     "chapterId": 7,
@@ -134,7 +202,24 @@ export const chapters = [
     "image": "/kapitel7.png",
     "btn_text": "Næste",
     "btn_link": "7/page/1",
-    "pages": []
+    "pages": [
+      {
+        "pageId": 1,
+        "text": "<span>Min løn om måneden før skat er</span>",
+        "tooltip": "",
+        "is_snack": false,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/7/page/2",
+      },
+      {
+        "pageId": 2,
+        "text": "<p><strong>Du vil få udbetalt omkring 24.744 kr. om måneden før skat, mens du er på pension. Det svarer til 77% af din løn.</strong></p><p>Du er godt på vej til at nå op på de mindst 70-80 %, som vi anbefaler. Det er vigtigt, hvis du skal have nok at leve af, når du går på pension.</p>",
+        "tooltip": "<p>Vi har omregnet alle dine pensioner i PKA til et forventet månedligt gennemsnit før skat, fra din folkepensionsalder og resten af dit liv. Hvordan du får din pension udbetalt afhænger af, hvilke pensionsopsparinger du har - det kan være en kombination af engangsudbetalinger, pension, der udbetales over en årrække og pension, der udbetales resten af livet. Folkepensionen er med, men folkepensionens tillæg er ikke med. Beregningen er uden tal fra PensionsInfo. Har du opsparinger andre steder, kan det påvirke resultatet og vores anbefalinger til dig.</p>",
+        "is_snack": true,
+        "btn_text": "Næste",
+        "btn_link": "/chapter/8"
+      }
+    ]
   },
   {
     "chapterId": 8,

@@ -5,22 +5,23 @@ import Image from 'next/image'
 import {chapters} from '@/api/data'
 
 export const getServerSideProps = async ({params}) => {
-  const data = chapters.filter(chapter => chapter.chapterId.toString() === params.chapterId)
+  const currentChapter = chapters.find(chapter => chapter.chapterId.toString() === params.chapterId)
 
   return {
-    props: {chapter: data[0]}
+    props: {currentChapter}
   }
 }
 
-const Chapter = ({chapter, ...props}) => {
-  const {chapterId, title, intro, image, btn_link, btn_text} = chapter
-  const {handleNavVisibility, setCurrentChapter, setCurrentPage, setCurrentSnack} = props
+const Chapter = ({currentChapter, ...props}) => {
+  const {chapterId, title, intro, image, btn_link, btn_text} = currentChapter
+  const {handleNavVisibility, setCurrentChapter, setCurrentPage, setCurrentSnack, setNextLink} = props
 
   useEffect(() => {
     handleNavVisibility(true)
     setCurrentPage(0)
     setCurrentSnack(false)
     setCurrentChapter(chapterId)
+    setNextLink(btn_link)
   }, [])
 
   return ( 
