@@ -2,10 +2,10 @@ import parse from 'html-react-parser'
 import {useEffect} from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import {chapters} from '@/api/data'
+import {data} from '@/api/data'
 
 export const getServerSideProps = async ({params}) => {
-  const currentChapter = chapters.find(chapter => chapter.chapterId.toString() === params.chapterId)
+  const currentChapter = data.chapters.find(chapter => chapter.chapterId.toString() === params.chapterId)
 
   return {
     props: {currentChapter}

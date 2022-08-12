@@ -1,14 +1,14 @@
 import {useEffect} from 'react'
 import parse from 'html-react-parser'
 import Link from 'next/link'
-import {chapters} from '@/api/data'
+import {data} from '@/api/data'
 import InputSelect from '@/components/InputSelect'
 import InputRange from '@/components/InputRange'
 import InputText from '@/components/InputText'
 import Background from '@/components/Background'
 
 export const getServerSideProps = async ({params}) => {
-  const currentChapter = chapters.find(chapter => chapter.chapterId.toString() === params.chapterId)
+  const currentChapter = data.chapters.find(chapter => chapter.chapterId.toString() === params.chapterId)
   const currentPage = currentChapter.pages.find(page => page.pageId.toString() === params.pageId)
 
   return {
@@ -19,11 +19,12 @@ export const getServerSideProps = async ({params}) => {
 const Page = ({currentPage, currentChapter, ...props}) => {
   const {pageId, text, input, is_snack, btn_link, btn_text} = currentPage
   const {chapterId, title} = currentChapter
-  const {setCurrentPage, setCurrentSnack, setNextLink} = props
+  const {setCurrentPage, setCurrentSnack, setNextLink, handleNavVisibility} = props
 
   useEffect(() => {
     setCurrentPage(pageId)
     setNextLink(btn_link)
+    handleNavVisibility(true)
     if (is_snack) {setCurrentSnack(true)} else {setCurrentSnack(false)}
   }, [is_snack, pageId, btn_link])
 

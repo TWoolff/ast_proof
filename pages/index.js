@@ -1,16 +1,17 @@
 import {useEffect} from 'react'
 import Link from 'next/link'
 import parse from 'html-react-parser'
-import {home} from '@/api/data'
+import {data} from '@/api/data'
 
 export const getServerSideProps = async () => {
+  
   return {
-      props: {home}
+      props: {data}
     }
   }
   
-const Home = ({home, ...props}) => {
-  const {user_name, intro, btn_link, btn_text, footnote} = home
+const Home = ({data, ...props}) => {
+  const {user_name, intro, btn_link, btn_text, footnote} = data.home
   const {handleNavVisibility, handleNavVariants} = props
 
   useEffect(() => {

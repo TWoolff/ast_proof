@@ -1,10 +1,20 @@
 .page {
+  display: flex;
+  flex-wrap: wrap;
   max-width: 680px;
+
+  span {
+    margin-right: 0.5rem;
+  }
 
   .page-info {
     position: absolute;
     top: 9rem;
     font-weight: $fontweight-600;
+  }
+
+  .btn-container {
+    width: 100vw;
   }
 }
 

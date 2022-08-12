@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import Router from 'next/router'
 import Link from 'next/link'
-import {chapters} from '@/api/data'
+import {data} from '@/api/data'
 
 const Navigation = props => {
   const {chapter, page, snack, btnLink, handleNavVariants} = props
@@ -36,7 +36,7 @@ const Navigation = props => {
     <nav>
       <a className='nav-up' onClick={() => handleClick()}>{arrowUp}</a>
       <aside className='progress'>
-        {chapters.map((chap, idx) => { 
+        {data.chapters.map((chap, idx) => { 
           return (
             <div className={'progress-section ' + (chapter > 1 && idx < chapter - 1 ? 'progress-read' : '')} key={idx} data-key={idx} >
               <div className='progress-fill' style={idx === chapter - 1 ? {height: fillHeight} : {}} />

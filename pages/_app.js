@@ -67,7 +67,6 @@ function App({Component, pageProps, router}) {
               setNextLink={setNextLink}
               handleNavVisibility={handleNavVisibility} 
               handleNavVariants={handleNavVariants}
-              router={router}
             />
           </motion.div>
         </AnimatePresence>
