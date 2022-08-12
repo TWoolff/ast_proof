@@ -4,4 +4,3 @@
 03. Handle text after input
 04. Nav progress fill when navigating back
 05. Fix skewed chapter images
-06. Change hardcoded btnLink in InputSelect.js

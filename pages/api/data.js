@@ -105,7 +105,7 @@ export const data = {
           "tooltip": "",
           "is_snack": false,
           "btn_text": "Næste",
-          "btn_link": "/chapter/3/page/2",
+          "btn_link": "/chapter/4",
           "input": {
             "input_id": 1,
             "type": "select",

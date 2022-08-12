@@ -32,7 +32,7 @@ const Page = ({currentPage, currentChapter, ...props}) => {
     <section className='page'>
       <div className='page-info'>{chapterId} {title}</div>
       {text && parse(text)}
-      {input && input.type === 'select' && <InputSelect placeholder={input.placeholder} options={input.options} btnTxt={btn_text} setNextLink={setNextLink} />}
+      {input && input.type === 'select' && <InputSelect placeholder={input.placeholder} options={input.options} btnTxt={btn_text} btn_link={btn_link} setNextLink={setNextLink} />}
       {input && input.type === 'range' && <InputRange name={input.name} min={input.min} max={input.max} label={input.label} btnTxt={btn_text} btnLink={btn_link} />}
       {input && input.type === 'text' && <InputText name={input.name} placeholder={input.placeholder} label={input.label} btnTxt={btn_text} btnLink={btn_link} />}
       {!input && !is_snack &&

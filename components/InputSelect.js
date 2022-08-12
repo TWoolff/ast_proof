@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 const InputSelect = props => {
   const ref = useRef(null);
-  const {placeholder, options, btnTxt, setNextLink} = props
-  const [btnLink, setBtnLink] = useState('/chapter/2') //change hardcoded value
+  const {placeholder, options, btnTxt, btn_link, setNextLink} = props
+  const [btnLink, setBtnLink] = useState('') 
   const [selected, setSelected] = useState(placeholder)
 
   const selectOptions = () => options.map(option => {
@@ -34,9 +34,10 @@ const InputSelect = props => {
   }
   
   useEffect(() => {
+    setBtnLink(btn_link)
     setNextLink(btnLink)
     if (ref.current) {setSelectWidth()}
-  },[btnLink, InputSelect])
+  })
   
   return ( 
     <>
