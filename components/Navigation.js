@@ -36,10 +36,10 @@ const Navigation = props => {
     <nav>
       <a className='nav-up' onClick={() => handleClick()}>{arrowUp}</a>
       <aside className='progress'>
-        {data.chapters.map((chap, idx) => { 
+        {data.chapters.map((e, i) => { 
           return (
-            <div className={'progress-section ' + (chapter > 1 && idx < chapter - 1 ? 'progress-read' : '')} key={idx} data-key={idx} >
-              <div className='progress-fill' style={idx === chapter - 1 ? {height: fillHeight} : {}} />
+            <div className={'progress-section ' + (chapter > 1 && i < chapter - 1 ? 'progress-read' : '')} key={i}>
+              <div className='progress-fill' style={i === chapter - 1 ? {height: fillHeight} : {}} />
             </div>
           )
         })}

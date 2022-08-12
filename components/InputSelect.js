@@ -12,8 +12,8 @@ const InputSelect = props => {
   })
   
   const handleSelect = e => {
-    const idx = e.target.selectedIndex
-    const option = e.target.querySelectorAll('option')[idx]
+    const i = e.target.selectedIndex
+    const option = e.target.querySelectorAll('option')[i]
     setBtnLink(option.getAttribute('data-link'))
     setSelected(e.target.value)
   }
