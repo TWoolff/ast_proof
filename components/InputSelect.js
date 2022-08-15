@@ -35,6 +35,9 @@ const InputSelect = props => {
   
   useEffect(() => {
     setBtnLink(btn_link)
+  },[])
+
+  useEffect(() => {
     setNextLink(btnLink)
     if (ref.current) {setSelectWidth()}
   })

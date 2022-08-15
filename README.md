@@ -4,3 +4,12 @@
 03. Handle text after input
 04. Nav progress fill when navigating back
 05. Fix skewed chapter images
+
+## REASONS TO CHANGE
+01. Easier db-data updating
+02. Multible pages prebuild (SSR)
+03. Element placement
+04. Progress animation is smoother
+05. Navigation possible from page to page
+06. Browser back button
+07. Cleaner code and data = faster load times + easier maintainability
