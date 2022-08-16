@@ -2,7 +2,7 @@ import {useState, useRef, useEffect} from 'react'
 
 const InputSelect = props => {
   const ref = useRef(null);
-  const {placeholder, options, btn_link, setNextLink, handleBtnLink} = props
+  const {type, placeholder, label, name, options, min, max, btn_link, setNextLink, handleBtnLink} = props
   const [btnLink, setBtnLink] = useState('') 
   const [selected, setSelected] = useState(placeholder)
 
@@ -44,16 +44,34 @@ const InputSelect = props => {
   })
   
   return ( 
-    <div className='ast-input'>
-      <select value={selected} onChange={e => {handleSelect(e); setSelectWidth(e)}} ref={ref}>
-        <option value='' hidden>{placeholder}</option>
-        {selectOptions()}
-      </select>
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="13" cy="13" r="13" transform="rotate(90 13 13)" fill="#CE0060" />
-        <path d="M17.3362 11.8073L12.9589 16.1846L8.58153 11.8073" stroke="white" strokeWidth="2" />
-      </svg>
-    </div>
+    <>
+      {type === 'select' &&
+        <div className='ast-input'>
+          <select value={selected} onChange={e => {handleSelect(e); setSelectWidth(e)}} ref={ref}>
+            <option value='' hidden>{placeholder}</option>
+            {selectOptions()}
+          </select>
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="13" cy="13" r="13" transform="rotate(90 13 13)" fill="#CE0060" />
+            <path d="M17.3362 11.8073L12.9589 16.1846L8.58153 11.8073" stroke="white" strokeWidth="2" />
+          </svg>
+        </div>
+      }
+
+      {type === 'text' &&
+        <div className='ast-input'>
+          <input type='text' name={name} placeholder={placeholder} />
+          <label htmlFor={name}>{label}</label>
+        </div>
+      }
+
+      {type === 'range' &&
+        <div className='ast-input'>
+          <input type='range' name={name} min={min} max={max} />
+          <label for={name}>{label}</label>
+        </div>
+      }
+    </>
   )
 }
  

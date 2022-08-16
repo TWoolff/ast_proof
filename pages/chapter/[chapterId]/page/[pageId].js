@@ -2,9 +2,7 @@ import {useEffect, useState} from 'react'
 import parse from 'html-react-parser'
 import Link from 'next/link'
 import {data} from '@/api/data'
-import InputSelect from '@/components/InputSelect'
-import InputRange from '@/components/InputRange'
-import InputText from '@/components/InputText'
+import Input from '@/components/Input'
 import Background from '@/components/Background'
 
 export const getServerSideProps = async ({params}) => {
@@ -34,21 +32,15 @@ const Page = ({currentPage, currentChapter, ...props}) => {
     if (is_snack) {setCurrentSnack(true)} else {setCurrentSnack(false)}
   }, [is_snack, pageId, btn_link])
 
-console.log(btnLink)
-
   return ( 
     <section className='page'>
       <div className='page-info'>{chapterId} {title}</div>
       {text && parse(text)}
-      {input && input.type === 'select' && <InputSelect placeholder={input.placeholder} options={input.options} btn_link={btn_link} setNextLink={setNextLink} handleBtnLink={handleBtnLink} />}
-      {input && input.type === 'range' && <InputRange name={input.name} min={input.min} max={input.max} label={input.label} btnTxt={btn_text} btnLink={btn_link} handleBtnLink={handleBtnLink} />}
-      {input && input.type === 'text' && <InputText name={input.name} placeholder={input.placeholder} label={input.label} btnTxt={btn_text} btnLink={btn_link} handleBtnLink={handleBtnLink} />}
-        <div className='btn-container'>
-            <Link href={btnLink}><a className={is_snack ? 'btn' : 'btn btn-secondary'}>{btn_text}</a></Link>
-        </div>
-      {is_snack && 
-          <Background />
-      }
+      {input && <Input type={input.type} placeholder={input.placeholder} options={input.options} name={input.name} min={input.min} max={input.max} label={input.label} btn_link={btn_link} setNextLink={setNextLink} handleBtnLink={handleBtnLink} />}
+      <div className='btn-container'>
+        <Link href={btnLink}><a className={is_snack ? 'btn' : 'btn btn-secondary'}>{btn_text}</a></Link>
+      </div>
+      {is_snack && <Background />}
     </section>
   )
 }
