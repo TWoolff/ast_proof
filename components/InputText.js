@@ -1,15 +1,16 @@
-import Link from 'next/link'
+import {useEffect} from 'react'
 
 const InputText = props => {
-  const {name, placeholder, label, btnTxt, btnLink} = props
+  const {name, placeholder, label, btnLink, handleBtnLink} = props
+
+  useEffect(() => {
+    handleBtnLink(btnLink)
+  }, [])
 
   return (
     <div className='ast-input'>
       <input type='text' name={name} placeholder={placeholder} />
       <label htmlFor={name}>{label}</label>
-      <div className='btn-container'>
-        <Link href={btnLink}><a className='btn btn-secondary'>{btnTxt}</a></Link>
-      </div>
     </div>
   )
 }

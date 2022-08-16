@@ -1,9 +1,8 @@
 import {useState, useRef, useEffect} from 'react'
-import Link from 'next/link'
 
 const InputSelect = props => {
   const ref = useRef(null);
-  const {placeholder, options, btnTxt, btn_link, setNextLink} = props
+  const {placeholder, options, btn_link, setNextLink, handleBtnLink} = props
   const [btnLink, setBtnLink] = useState('') 
   const [selected, setSelected] = useState(placeholder)
 
@@ -15,6 +14,7 @@ const InputSelect = props => {
     const i = e.target.selectedIndex
     const option = e.target.querySelectorAll('option')[i]
     setBtnLink(option.getAttribute('data-link'))
+    handleBtnLink(option.getAttribute('data-link'))
     setSelected(e.target.value)
   }
 
@@ -35,6 +35,7 @@ const InputSelect = props => {
   
   useEffect(() => {
     setBtnLink(btn_link)
+    handleBtnLink(btn_link)
   },[])
 
   useEffect(() => {
@@ -43,21 +44,16 @@ const InputSelect = props => {
   })
   
   return ( 
-    <>
-      <div className='ast-input'>
-        <select value={selected} onChange={e => {handleSelect(e); setSelectWidth(e)}} ref={ref}>
-          <option value='' hidden>{placeholder}</option>
-          {selectOptions()}
-        </select>
-        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="13" cy="13" r="13" transform="rotate(90 13 13)" fill="#CE0060" />
-          <path d="M17.3362 11.8073L12.9589 16.1846L8.58153 11.8073" stroke="white" strokeWidth="2" />
-        </svg>
-      </div>
-      <div className='btn-container'>
-        <Link href={btnLink}><a className='btn btn-secondary'>{btnTxt}</a></Link>
-      </div>
-    </>
+    <div className='ast-input'>
+      <select value={selected} onChange={e => {handleSelect(e); setSelectWidth(e)}} ref={ref}>
+        <option value='' hidden>{placeholder}</option>
+        {selectOptions()}
+      </select>
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="13" cy="13" r="13" transform="rotate(90 13 13)" fill="#CE0060" />
+        <path d="M17.3362 11.8073L12.9589 16.1846L8.58153 11.8073" stroke="white" strokeWidth="2" />
+      </svg>
+    </div>
   )
 }
  

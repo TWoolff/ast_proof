@@ -1,15 +1,16 @@
-import Link from 'next/link'
+import { useEffect } from "react"
 
 const InputRange = props => {
-  const {name, min, max, label, btnTxt, btnLink} = props
+  const {name, min, max, label, btnLink, handleBtnLink} = props
+
+  useEffect(() => {
+    handleBtnLink(btnLink)
+  }, [])
 
   return (
     <div className='ast-input'>
       <input type='range' name={name} min={min} max={max} />
       <label for={name}>{label}</label>
-      <div className='btn-container'>
-        <Link href={btnLink}><a className='btn btn-secondary'>{btnTxt}</a></Link>
-      </div>
     </div>
   )
 }
