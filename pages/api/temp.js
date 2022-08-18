@@ -1,10 +1,8 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import parse from 'html-react-parser'
 import Link from 'next/link'
 import {data} from '@/api/data2'
-import InputSelect from '@/components/InputSelect'
-import InputRange from '@/components/InputRange'
-import InputText from '@/components/InputText'
+import Input from '@/components/Input'
 import Background from '@/components/Background'
 
 export const getServerSideProps = async ({params}) => {
@@ -20,6 +18,11 @@ const Page = ({currentPage, currentChapter, ...props}) => {
   const {pageId, is_snack, btn_link, btn_text, content} = currentPage
   const {chapterId, title} = currentChapter
   const {setCurrentPage, setCurrentSnack, setNextLink, handleNavVisibility} = props
+  const [btnLink, setBtnLink] = useState('')
+
+  const handleBtnLink = (btn) => {
+    setBtnLink(btn)
+  }
 
   useEffect(() => {
     setCurrentPage(pageId)
@@ -34,34 +37,28 @@ const Page = ({currentPage, currentChapter, ...props}) => {
       {content.map((cont, i) => {
         return (
           <div key={i}>
-            {cont.text && 
-              parse(cont.text)
-            }
-            {cont.input && cont.input.type === 'select' && 
-              <InputSelect placeholder={cont.input.placeholder} options={cont.input.options} btnTxt={btn_text} btn_link={btn_link} setNextLink={setNextLink} />
-            }
-            {cont.input && cont.input.type === 'text' && 
-              <InputText name={cont.input.name} placeholder={cont.input.placeholder} btnTxt={btn_text} btnLink={btn_link} />
-            }
-            {cont.input && cont.input.type === 'range' && 
-              <InputRange name={cont.input.name} min={cont.input.min} max={cont.input.max} label={cont.input.label} btnTxt={btn_text} btnLink={btn_link} />
-            }
-            {!cont.input &&
-              <div className='btn-container'>
-                  <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
-              </div>
-            }
+            {cont.text && parse(cont.text)}
+            {cont.input &&
+              <Input
+                type={cont.input.type}
+                placeholder={cont.input.placeholder}
+                options={cont.input.options}
+                name={cont.input.name}
+                min={cont.input.min}
+                max={cont.input.max}
+                label={cont.input.label}
+                btn_link={btn_link}
+                setNextLink={setNextLink}
+                handleBtnLink={handleBtnLink}
+              />
+            }   
           </div>
         )
       })}
-      {is_snack && 
-        <>
-          <Background />
-          <div className='btn-container'>
-            <Link href={btn_link}><a className='btn'>{btn_text}</a></Link>
-          </div>
-        </>
-      }
+      <div className='btn-container'>
+        <Link href={btnLink}><a className={is_snack ? 'btn' : 'btn btn-secondary'}>{btn_text}</a></Link>
+      </div>
+      {is_snack && <Background />}
     </section>
   )
 }

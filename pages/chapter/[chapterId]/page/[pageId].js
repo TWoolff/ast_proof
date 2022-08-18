@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react'
-import parse from 'html-react-parser'
 import Link from 'next/link'
+import parse from 'html-react-parser'
 import {data} from '@/api/data'
 import Input from '@/components/Input'
 import Background from '@/components/Background'
@@ -20,8 +20,9 @@ const Page = ({currentPage, currentChapter, ...props}) => {
   const {setCurrentPage, setCurrentSnack, setNextLink, handleNavVisibility} = props
   const [btnLink, setBtnLink] = useState('')
 
-  const handleBtnLink = (btn) => {
+  const handleBtnLink = btn => {
     setBtnLink(btn)
+    setNextLink(btn)
   }
 
   useEffect(() => {
@@ -36,7 +37,20 @@ const Page = ({currentPage, currentChapter, ...props}) => {
     <section className='page'>
       <div className='page-info'>{chapterId} {title}</div>
       {text && parse(text)}
-      {input && <Input type={input.type} placeholder={input.placeholder} options={input.options} name={input.name} min={input.min} max={input.max} label={input.label} btn_link={btn_link} setNextLink={setNextLink} handleBtnLink={handleBtnLink} />}
+      {input && 
+        <Input
+          type={input.type}
+          placeholder={input.placeholder}
+          options={input.options}
+          name={input.name}
+          min={input.min}
+          max={input.max}
+          label={input.label}
+          btn_link={btn_link}
+          setNextLink={setNextLink}
+          handleBtnLink={handleBtnLink}
+        />
+      }
       <div className='btn-container'>
         <Link href={btnLink}><a className={is_snack ? 'btn' : 'btn btn-secondary'}>{btn_text}</a></Link>
       </div>

@@ -4,7 +4,6 @@ import parse from 'html-react-parser'
 import {data} from '@/api/data'
 
 export const getServerSideProps = async () => {
-  
   return {
       props: {data}
     }

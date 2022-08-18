@@ -32,8 +32,8 @@ function App({Component, pageProps, router}) {
     setBtnLink(btnLink)
   }
 
-  const handleNavVariants = updown => {
-    setNavVariants(updown)
+  const handleNavVariants = y => {
+    setNavVariants(y)
   }
 
   useEffect(() => {
